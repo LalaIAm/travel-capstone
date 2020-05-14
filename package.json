@@ -4,7 +4,12 @@
   "description": "A travel planner app.",
   "main": "dist/main.bundle.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build-dev": "webpack-dev-server --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js",
+    "start": "node src/server/server.js",
+    "dev": "nodemon src/server/server.js",
+    "all": "npm-run-all --parallel \"build-dev\" \"dev\""
   },
   "repository": {
     "type": "git",
