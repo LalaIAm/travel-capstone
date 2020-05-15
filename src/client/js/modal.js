@@ -3,11 +3,13 @@ const modal = document.getElementById('modal');
 const closeBtn = document.getElementById('modal-close');
 const menuIcon = document.getElementById('menu-icon');
 const navigation = document.getElementById('navigation');
-const app = document.getElementById('app');
+const navLinks = document.getElementsByClassName('navigation-link')
 
 menuIcon.onclick = function () {
   Travel.showNav();
   Travel.createNav();
+
+  
 };
 
 modalBtn.onclick = function () {
@@ -18,6 +20,10 @@ modalBtn.onclick = function () {
 closeBtn.onclick = function () {
   modal.style.display = 'none';
 };
+
+navigation.onmouseleave = function () {
+  navigation.style.left = '-32rem'
+}
 
 window.onclick = function (event) {
   if (event.target == modal) {

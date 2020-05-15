@@ -88,3 +88,64 @@ button:hover {
 .info-container {
   grid-area: info;
 }
+
+#sub-nav {
+  width: 100%;
+  background: linear-gradient(45deg, #88373f, #26272f);
+  margin-top: 0;
+  position: relative;
+  bottom: 5rem;
+  padding: 1rem;
+
+  #trip-nav {
+    display: flex;
+    list-style: none;
+    padding: 0.5rem;
+    justify-content: space-evenly;
+
+    .trip-item {
+      position: relative;
+    }
+
+    .trip-link {
+      color: #f3f1ed;
+      font-size: 2rem;
+      text-decoration: none;
+      letter-spacing: 0.1rem;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: color 0.5s;
+    }
+
+    .trip-link::before {
+      content: '';
+      width: 0rem;
+      height: 0.1rem;
+      background-color: #286da8;
+      position: absolute;
+      top: 1rem;
+      left: -4rem;
+      transition: width 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    }
+
+    .trip-link::after {
+      content: '';
+      width: 0rem;
+      height: 0.1rem;
+      background-color: #286da8;
+      position: absolute;
+      top: 1rem;
+      right: -4rem;
+      transition: width 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    }
+
+    .trip-link:hover {
+      color: #286da8;
+    }
+
+    .trip-link:hover::before,
+    .trip-link:hover::after {
+      width: 3rem;
+    }
+  }
+}

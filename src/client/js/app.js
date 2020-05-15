@@ -37,7 +37,7 @@ const getData = async (url = '') => {
 };
 
 const userTrips = async () => {
-  const trips = await getData('/api/allTrips');
+  const trips = await getData('/api/all');
   console.log('trips: ', trips);
   return trips;
 };
@@ -60,7 +60,7 @@ async function createNav() {
 
     anchor.onclick = (event) => {
       event.preventDefault();
-      Travel.updateUI(trip);
+      Travel.updateGallery(trip.images)
     };
 
     let li = document.createElement('li');

@@ -19,6 +19,6 @@ const mongo = stitch.getServiceClient(
     'mongodb-atlas'
 )
 
-const trips = mongo.db('travelFar').collection('trips');
+const trips = mongo.db('journeyJournal').collection('trips');
 
 module.exports = { trips, stitch };
