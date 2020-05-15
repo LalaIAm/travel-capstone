@@ -27,6 +27,14 @@ h2 {
   font-size: 3.5rem;
 }
 
+h3 {
+  font-family: 'span';
+  text-align: center;
+  font-style: italic;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
 h4 {
   font-family: 'span';
   font-style: italic;
@@ -148,4 +156,17 @@ button:hover {
       width: 3rem;
     }
   }
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 'left right';
+  width: 100%;
+}
+
+#counter {
+  display: none;
+  margin: 1rem auto;
+  grid-area: left;
 }

@@ -60,7 +60,8 @@ async function createNav() {
 
     anchor.onclick = (event) => {
       event.preventDefault();
-      Travel.updateGallery(trip.images)
+      Travel.updateUi(trip)
+
     };
 
     let li = document.createElement('li');

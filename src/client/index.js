@@ -6,7 +6,7 @@ import './styles/gallery.scss';
 
 import { sendData, getData, createNav } from './js/app';
 import { showNav, submitAnswer, menuActions} from './js/modal';
-import { updateGallery } from './js/updateUI';
+import { updateGallery, updateTripTitle, updateUi } from './js/updateUI';
 
 export {
     sendData,
@@ -15,5 +15,7 @@ export {
     showNav,
     submitAnswer,
     menuActions,
-    updateGallery
+    updateGallery,
+    updateUi,
+    updateTripTitle
 }
